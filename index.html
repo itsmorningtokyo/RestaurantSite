@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Maison — Ресторан изысканной кухни</title>
-  <meta name="description" content="Интерактивное меню ресторана La Maison. Изысканная кухня, авторские блюда, премиальные напитки.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Maison — Ресторан изысканной кухни</title>
+    <meta name="description" content="Интерактивное меню ресторана La Maison. Изысканная кухня, авторские блюда, премиальные напитки.">
+    
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Голова сайта-->
   <header class="header" id="header" role="banner">
     <div class="header-inner">
       <a href="#" class="logo" aria-label="La Maison - На главную">La <span>Maison</span></a>
@@ -30,8 +32,8 @@
     </div>
   </header>
 
-  <!-- Мобильная навигация -->
-  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Навигация">
+        <!-- Мобильная навигация -->
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Навигация">
     <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть навигацию">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -58,30 +60,273 @@
     </div>
   </section>
 
-  <!-- Меню -->
-  <section class="menu-section" id="menu" aria-label="Меню ресторана">
-    <div class="section-header">
-      <p class="section-label">Наше меню</p>
-      <h2 class="section-title">Изысканные блюда на любой вкус</h2>
-    </div>
+    <!-- Меню -->
+    <section class="menu-section" id="menu" aria-label="Меню ресторана">
+        <div class="section-header">
+            <p class="section-label">Наше меню</p>
+            <h2 class="section-title">Изысканные блюда на любой вкус</h2>
+        </div>
 
-    <div class="category-tabs" role="tablist" aria-label="Категории меню">
-      <button class="tab-btn active" role="tab" aria-selected="true" data-category="all">Все</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-category="starters">Закуски</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-category="soups">Супы</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-category="mains">Основные</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-category="desserts">Десерты</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-category="drinks">Напитки</button>
-    </div>
+        <div class="category-tabs" role="tablist" aria-label="Категории меню">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-category="all">Все</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-category="starters">Закуски</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-category="soups">Супы</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-category="mains">Основные</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-category="desserts">Десерты</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-category="drinks">Напитки</button>
+        </div>
 
-    <div class="menu-grid" id="menuGrid" role="list" aria-label="Список блюд">
-          
-    </div>
+        <div class="menu-grid" id="menuGrid" role="list" aria-label="Список блюд">
+            
+            <!-- Карточка 1: Брускетта -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(1)">
+                    <img class="dish-image" src="images/bruschetta.jpg" loading="lazy" alt="Брускетта с томатами">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name"style="cursor:pointer;" onclick="openModal(1)">Брускетта с томатами</h3>
+                        <span class="dish-price">580 ₽</span>
+                    </div>
+                    <p class="dish-desc">Хрустящий хлеб чиабатта с нарезанными томатами черри, свежим базиликом, чесноком и оливковым маслом первого отжима.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Вегетарианское</span>
+                        <span class="dish-weight">180 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(1, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-1">1</span>
+                            <button class="qty-btn" onclick="changeQty(1, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-1" onclick="addToCart(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            В заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  </section>
+            <!-- Карточка 2: Цезарь -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(2)">
+                    <img class="dish-image" src="images/caesar.jpg" alt="Салат Цезарь" loading="lazy">
+                    <span class="dish-badge">Хит</span>
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(2)">Цезарь</h3>
+                        <span class="dish-price">720 ₽</span>
+                    </div>
+                    <p class="dish-desc">Романо, куриная грудка sous-vide, пармезан, хрустящие крутоны и фирменный соус Цезарь.</p>
+                    <div class="dish-meta">
+                        <span class="dish-weight">250 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(2, -1)">-</button>
+                            <span class="qty-value" id="qty-2">1</span>
+                            <button class="qty-btn" onclick="changeQty(2, 1)">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-2" onclick="addToCart(2)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+            
+                        <!-- Карточка 3: Крем-суп из грибов (из скриншота 5) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(3)">
+                    <img class="dish-image" src="images/soup.jpg" loading="lazy" alt="Крем-суп из грибов">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(3)">Крем-суп из грибов</h3>
+                        <span class="dish-price">490 ₽</span>
+                    </div>
+                    <p class="dish-desc">Нежный крем-суп из белых грибов и шампиньонов с трюфельным маслом и свежими травами.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Вегетарианское</span>
+                        <span class="dish-weight">300 мл</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(3, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-3">1</span>
+                            <button class="qty-btn" onclick="changeQty(3, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-3" onclick="addToCart(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            В заказ
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Подвал -->
-  <footer class="footer" id="footer" role="contentinfo">
+            <!-- Карточка 4: Паста Карбонара (из скриншота 6) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(4)">
+                    <img class="dish-image" src="images/pasta.jpg" loading="lazy" alt="Паста Карбонара">
+                    <span class="dish-badge">Хит</span>
+                </div>
+                <div class="dish-body">                     <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(4)">Паста Карбонара</h3>
+                        <span class="dish-price">850 ₽</span>
+                    </div>
+                    <p class="dish-desc">Спагетти аль денте с хрустящей гуанчиале, яичным соусом и пекорино романо.</p>
+                    <div class="dish-meta">
+                        <span class="dish-weight">320 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(4, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-4">1</span>
+                            <button class="qty-btn" onclick="changeQty(4, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-4" onclick="addToCart(4)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 5: Стейк Рибай (из скриншота 7) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(5)">
+                    <img class="dish-image" src="images/steak.jpg" loading="lazy" alt="Стейк Рибай">
+                    <span class="dish-badge">Шеф рекомендует</span>
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(5)">Стейк Рибай</h3>
+                        <span class="dish-price">2400 ₽</span>
+                    </div>
+                    <p class="dish-desc">Мраморная говядина рибай на гриле с розмарином, чесночным маслом и гарниром из овощей.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Безглютеновое</span>
+                        <span class="dish-weight">350 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(5, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-5">1</span>
+                            <button class="qty-btn" onclick="changeQty(5, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-5" onclick="addToCart(5)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 6: Лосось на гриле (из скриншота 8) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(6)">
+                    <img class="dish-image" src="images/salmon.jpg" loading="lazy" alt="Лосось на гриле">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(6)">Лосось на гриле</h3>
+                        <span class="dish-price">1650 ₽</span>
+                    </div>
+                    <p class="dish-desc">Филе атлантического лосося с хрустящей корочкой, спаржей и лимонным соусом.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Безглютеновое</span>
+                        <span class="dish-weight">280 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(6, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-6">1</span>
+                            <button class="qty-btn" onclick="changeQty(6, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-6" onclick="addToCart(6)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(7)">
+                    <img class="dish-image" src="images/risotto.jpg" loading="lazy" alt="Ризотто с грибами">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(7)">Ризотто с грибами</h3>
+                        <span class="dish-price">980 ₽</span>
+                    </div>
+                    <p class="dish-desc">Кремовое ризотто с белыми грибами, пармезаном и ароматными травами.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Вегетарианское</span>
+                        <span class="dish-weight">300 г</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(7, -1)" aria-label="Уменьшить количество">-</button>
+                            <span class="qty-value" id="qty-7">1</span>
+                            <button class="qty-btn" onclick="changeQty(7, 1)" aria-label="Увеличить количество">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-7" onclick="addToCart(7)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Карточка 8: Красное вино Кьянти (из скриншота 1) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(8)">
+                    <img class="dish-image" src="images/wine.jpg" loading="lazy" alt="Красное вино Кьянти">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(8)">Красное вино Кьянти</h3>
+                        <span class="dish-price">680 ₽</span>
+                    </div>
+                    <p class="dish-desc">Изысканное красное сухое вино с нотами спелой вишни, фиалки и легким оттенком пряностей.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Напиток</span>
+                        <span class="dish-weight">150 мл</span>
+                    </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(8, -1)">-</button>
+                            <span class="qty-value" id="qty-8">1</span>
+                            <button class="qty-btn" onclick="changeQty(8, 1)">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-8" onclick="addToCart(8)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 9: Домашний лимонад (из скриншота 10) -->
+            <div class="dish-card" role="listitem">
+                <div class="dish-image-wrap" style="cursor:pointer;" onclick="openModal(9)">
+                    <img class="dish-image" src= "images/lemonade.jpg" loading="lazy" alt="Домашний лимонад">
+                </div>
+                <div class="dish-body">
+                    <div class="dish-top-row">
+                        <h3 class="dish-name" style="cursor:pointer;" onclick="openModal(9)">Домашний лимонад</h3>
+                        <span class="dish-price">350 ₽</span>
+                    </div>
+                    <p class="dish-desc">Освежающий напиток собственного приготовления на основе лимонного сока, мяты и газированной воды.</p>
+                    <div class="dish-meta">
+                        <span class="dish-tag">Напиток</span>
+                        <span class="dish-weight">300 мл</span>
+                                        </div>
+                    <div class="dish-actions">
+                        <div class="qty-control">
+                            <button class="qty-btn" onclick="changeQty(9, -1)">-</button>
+                            <span class="qty-value" id="qty-9">1</span>
+                            <button class="qty-btn" onclick="changeQty(9, 1)">+</button>
+                        </div>
+                        <button class="add-btn" id="addBtn-9" onclick="addToCart(9)">В заказ</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Конец menu-grid -->
+    </section>
+
+    <footer class="footer" id="footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="#" class="logo">La <span>Maison</span></a>

@@ -8,7 +8,7 @@ const menuData = [
         weight: "180 г",
         calories: "220 ккал",
         cookTime: "10 мин",
-        image: "/images/bruschetta.jpg",
+        image: "images/bruschetta.jpg",
         category: "starters",
         badge: null,
         tags: ["Вегетарианское"]
@@ -22,7 +22,7 @@ const menuData = [
         weight: "250 г",
         calories: "340 ккал",
         cookTime: "15 мин",
-        image: "/images/caesar.jpg",
+        image: "images/caesar.jpg",
         category: "starters",
         badge: "Хит",
         tags: []
@@ -36,7 +36,7 @@ const menuData = [
         weight: "300 мл",
         calories: "280 ккал",
         cookTime: "20 мин",
-        image: "/images/soup.jpg",
+        image: "images/soup.jpg",
         category: "soups",
         badge: null,
         tags: ["Вегетарианское"]
@@ -50,7 +50,7 @@ const menuData = [
         weight: "320 г",
         calories: "520 ккал",
         cookTime: "20 мин",
-        image: "/images/pasta.jpg",
+        image: "images/pasta.jpg",
         category: "mains",
         badge: "Хит",
         tags: []
@@ -64,7 +64,7 @@ const menuData = [
         weight: "350 г",
         calories: "680 ккал",
         cookTime: "25 мин",
-        image: "/images/steak.jpg",
+        image: "images/steak.jpg",
         category: "mains",
         badge: "Шеф рекомендует",
         tags: ["Безглютеновое"]
@@ -78,7 +78,7 @@ const menuData = [
         weight: "280 г",
         calories: "450 ккал",
         cookTime: "20 мин",
-        image: "/images/salmon.jpg",
+        image: "images/salmon.jpg",
         category: "mains",
         badge: null,
         tags: ["Безглютеновое"]
@@ -92,7 +92,7 @@ const menuData = [
         weight: "300 г",
         calories: "420 ккал",
         cookTime: "30 мин",
-        image: "/images/risotto.jpg",
+        image: "images/risotto.jpg",
         category: "mains",
         badge: null,
         tags: ["Вегетарианское"]
@@ -106,7 +106,7 @@ const menuData = [
         weight: "150 г",
         calories: "380 ккал",
         cookTime: "5 мин",
-        image: "/images/tiramisu.jpg",
+        image: "images/tiramisu.jpg",
         category: "desserts",
         badge: "Хит",
         tags: []
@@ -120,7 +120,7 @@ const menuData = [
         weight: "160 г",
         calories: "420 ккал",
         cookTime: "5 мин",
-        image: "/images/cheesecake.jpg",
+        image: "images/cheesecake.jpg",
         category: "desserts",
         badge: null,
         tags: []
@@ -134,7 +134,7 @@ const menuData = [
         weight: "150 мл",
         calories: "130 ккал",
         cookTime: "—",
-        image: "/images/wine.jpg",
+        image: "images/wine.jpg",
         category: "drinks",
         badge: null,
         tags: []
@@ -148,7 +148,7 @@ const menuData = [
         weight: "400 мл",
         calories: "120 ккал",
         cookTime: "—",
-        image: "/images/lemonade.jpg",
+        image: "images/lemonade.jpg",
         category: "drinks",
         badge: null,
         tags: ["Безалкогольное"]

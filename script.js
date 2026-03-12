@@ -416,7 +416,6 @@ const menuData = [
 
     // ===== MOBILE NAV =====
     var mobileNav = document.getElementById("mobileNav");
-
     document.getElementById("mobileToggle").addEventListener("click", function() {
       mobileNav.classList.add("open");
       document.body.style.overflow = "hidden";
@@ -448,11 +447,12 @@ phoneInput.addEventListener('input', () => {
     }
 });
 
+
     // ===== CHECKOUT =====
     checkoutBtn.addEventListener("click", function() {
       if (cart.length === 0) return;
       var total = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
-      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD! Наш менеджер свяжится с вами в ближайщее время" ;
+      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD! Наш менеджер свяжится с вами в ближайщее время");
       cart = [];
       updateCart();
       closeCartDrawer();
@@ -470,4 +470,3 @@ phoneInput.addEventListener('input', () => {
     // ===== INIT =====
     renderMenu("all");
     updateCart();
- 

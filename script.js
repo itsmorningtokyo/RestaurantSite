@@ -429,6 +429,25 @@ const menuData = [
       document.body.style.overflow = "";
     }
 
+const phoneInput = document.getElementById('phoneInput');
+const confirmBtn = document.getElementById('checkoutBtn');
+
+// Слушаем ввод в поле телефона
+phoneInput.addEventListener('input', () => {
+    // Условие: если введено больше 10 символов (базовая проверка для номера)
+    // Можно заменить на проверку на пустоту: if (phoneInput.value.trim() !== "")
+    if (phoneInput.value.length >= 11) {
+        confirmBtn.disabled = false;     // Активируем кнопку
+        confirmBtn.style.opacity = "1";  // Делаем её яркой
+        confirmBtn.style.cursor = "pointer";
+    } 
+    else {
+        confirmBtn.disabled = true;      // Деактивируем кнопку
+        confirmBtn.style.opacity = "0.5"; // Делаем её полупрозрачной (визуальный отклик)
+        confirmBtn.style.cursor = "not-allowed";
+    }
+});
+
     // ===== CHECKOUT =====
     checkoutBtn.addEventListener("click", function() {
       if (cart.length === 0) return;

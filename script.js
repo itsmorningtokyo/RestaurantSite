@@ -397,13 +397,19 @@ const menuData = [
     });
 
     // ===== NOTIFICATION =====
-    function showNotification(msg) {
-      notificationEl.textContent = msg;
-      notificationEl.classList.add("show");
-      setTimeout(function() {
-        notificationEl.classList.remove("show");
-      }, 2000);
-    }
+    function showNotification(message) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.classList.add('show');
+
+    // Исчезает само через 2.5 секунды
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 2500);
+}
+
+// Пример вызова в функции добавления в корзину:
+// showNotification("Блюдо добавлено в корзину!");
 
     // ===== HEADER SCROLL =====
     window.addEventListener("scroll", function() {
@@ -452,7 +458,10 @@ phoneInput.addEventListener('input', () => {
     checkoutBtn.addEventListener("click", function() {
       if (cart.length === 0) return;
       var total = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
-      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD!");
+      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD! Наш менеджер свяжится с вами в ближайщее время");
+      phoneInput.value = ""; // Номер не сохраняем, поле очищаем
+      this.disabled = true;  // Кнопку снова блокируем
+      this.style.opacity = "0.5";
       cart = [];
       updateCart();
       closeCartDrawer();

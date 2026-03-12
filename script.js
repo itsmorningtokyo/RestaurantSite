@@ -452,7 +452,7 @@ phoneInput.addEventListener('input', () => {
     checkoutBtn.addEventListener("click", function() {
       if (cart.length === 0) return;
       var total = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
-      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD!");
+      showNotification("Заказ оформлен на " + total.toLocaleString("ru-RU") + " \u20BD! Наш менеджер свяжится с вами в ближайщее время" ;
       cart = [];
       updateCart();
       closeCartDrawer();

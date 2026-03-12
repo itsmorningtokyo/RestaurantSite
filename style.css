@@ -729,6 +729,8 @@
     }
 
     .checkout-btn {
+      display: block;
+      margin: 20px auto 10px;
       min-width: 260px;
       background: var(--color-accent);
       color: var(--color-bg);
@@ -736,7 +738,7 @@
       padding: 15px 45px;
       border-radius: 8px;
       font-family: var(--font-body);
-      font-size: 0.95rem;
+      font-size: 0.875rem;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.2s ease;
